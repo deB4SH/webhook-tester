@@ -5,10 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
-    tags: [ v* ]
-  pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   IMAGE_NAME: deb4sh/webhook-tester
