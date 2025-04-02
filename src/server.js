@@ -2,9 +2,8 @@ const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 
 module.exports = (app, { port = 8080 }) => {
-
-  app.use(bodyParser.json({ limit: '50mb' }));
-  app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+  app.use(bodyParser.json({ limit: '50mb' }))
+  app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 
   app.use((req, res, next) => {
     console.log(`${req.method} ${req.path} request received at ${Date.now()}`)
