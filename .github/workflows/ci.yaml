@@ -11,9 +11,12 @@ on:
     branches: [ master ]
 
 env:
-  IMAGE_NAME: coveros/webhook-tester
+  IMAGE_NAME: deb4sh/webhook-tester
   NODE_VERSION: 14.x
   REGISTRY: ghcr.io
+
+permissions:
+  packages: write
 
 jobs:
   build:
